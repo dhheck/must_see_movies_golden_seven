@@ -35,4 +35,21 @@ Rails.application.routes.draw do
   #Delete a Director
   get('/delete_director/:id',       { :controller => 'directors', :action => 'destroy' })
 
+  #ACTOR Routes
+
+  #Create a new Actor
+  get("/actors/new_form",   { :controller => "actors", :action => "new_form" })
+  get("/create_actor",      { :controller => "actors", :action => "create_row" })
+
+  #Read
+  get("/actors",      { :controller => "actors", :action => "index" })
+  get("/actors/:id",  { :controller => "actors", :action => "show" })
+
+  #Edit an Actor
+  get("/actors/:id/edit_form",   { :controller => "actors", :action => "edit_form" })
+  get('/update_actor/:id',       { :controller => "actors", :action => 'update_row' })
+
+  #Delete an Actor
+  get('/delete_actor/:id',       { :controller => 'actors', :action => 'destroy' })
+
 end
