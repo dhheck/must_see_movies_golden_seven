@@ -28,4 +28,11 @@ Rails.application.routes.draw do
   get("/directors",      { :controller => "directors", :action => "index" })
   get("/directors/:id",  { :controller => "directors", :action => "show" })
 
+  #Edit a Director
+  get("/directors/:id/edit_form",   { :controller => "directors", :action => "edit_form" })
+  get('/update_director/:id',       { :controller => "directors", :action => 'update_row' })
+
+  #Delete a Director
+  get('/delete_director/:id',       { :controller => 'directors', :action => 'destroy' })
+
 end
